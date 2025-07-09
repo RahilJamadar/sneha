@@ -4,35 +4,45 @@ const prevBtn = document.getElementById('prevBtn');
 const startBtn = document.getElementById('startBtn');
 
 let currentCard = 0;
+let audioTimeout;
 
 function showCard(index) {
-  // Stop all audio
+  // Clear any pending audio play timeout
+  if (audioTimeout) {
+    clearTimeout(audioTimeout);
+  }
+
+  // Stop all media and deactivate cards
   cards.forEach(card => {
     card.classList.remove('active');
+
     const audio = card.querySelector('audio');
     if (audio) {
       audio.pause();
       audio.currentTime = 0;
     }
+
     const video = card.querySelector('video');
-    if (video) { 
+    if (video) {
       video.pause();
       video.currentTime = 0;
     }
   });
 
+  // Activate new card
   cards[index].classList.add('active');
 
   const audio = cards[index].querySelector('audio');
   const video = cards[index].querySelector('video');
 
-  // Only play audio if card is not a video card
+  // Play media accordingly
   if (audio && !video) {
-    setTimeout(() => audio.play(), 1500);
+    audioTimeout = setTimeout(() => audio.play(), 1500);
   }
-  if(video) {
+  if (video) {
     video.play();
   }
+
   currentCard = index;
 }
 
@@ -41,9 +51,13 @@ startBtn.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-  if (currentCard < cards.length - 1) showCard(currentCard + 1);
+  if (currentCard < cards.length - 1) {
+    showCard(currentCard + 1);
+  }
 });
 
 prevBtn.addEventListener('click', () => {
-  if (currentCard > 0) showCard(currentCard - 1);
+  if (currentCard > 0) {
+    showCard(currentCard - 1);
+  }
 });
