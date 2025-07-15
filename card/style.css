@@ -224,3 +224,47 @@ body {
   box-shadow: 0 6px 15px rgba(255, 120, 130, 0.5);
 }
 
+
+@media (min-width: 1024px) {
+  #backlink {
+    font-size: 1.4rem;
+    padding: 8px 16px;
+  }
+
+  .container {
+    width: 900px;
+    height: 650px;
+  }
+
+  .card h2 {
+    font-size: 2rem;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  #firstCard button#startBtn {
+    font-size: 1.6rem;
+    padding: 12px 20px;
+  }
+
+  .controls {
+    bottom: 40px;
+    padding: 10px 24px;
+  }
+
+  .controls button {
+    font-size: 1.2rem;
+    padding: 12px 16px;
+  }
+
+  .card img {
+  width: 500px;
+  height: calc(100% - 60px);
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+}
