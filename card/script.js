@@ -44,7 +44,23 @@ function showCard(index) {
   }
 
   currentCard = index;
+
+  // Toggle next button visibility
+  if (currentCard === cards.length - 1) {
+    nextBtn.style.display = 'none';
+  } else {
+    nextBtn.style.display = '';
+  }
+
+  if (currentCard === 0) {
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+  } else {
+    prevBtn.style.display = '';
+  }
 }
+
+
 
 startBtn.addEventListener('click', () => {
   showCard(1);
@@ -60,4 +76,10 @@ prevBtn.addEventListener('click', () => {
   if (currentCard > 0) {
     showCard(currentCard - 1);
   }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Initialize the first card
+  showCard(0);
 });
