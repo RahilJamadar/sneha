@@ -268,3 +268,29 @@ body {
   margin-top: 16px;
 }
 }
+
+
+button#letterBtn {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 14px 24px;
+  font-size: 5vw;
+  background: linear-gradient(135deg, #FF7882, #ffb4bc);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 120, 130, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: pulse 1.5s infinite;
+}
+
+button#letterBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 120, 130, 0.6);
+}
+
+#letterBtn a {
+  text-decoration: none;
+  color: white;
+}
