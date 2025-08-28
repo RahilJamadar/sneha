@@ -71,12 +71,14 @@ const _slideDua = function () {
         _slideTiga();
       }, 1000);
     })
-  }, 10000);
+  }, 20000);
 };
 
 const _slideTiga = function () {
   const tap = document.getElementById('tap');
   const slideTiga = document.getElementById('slideTiga');
+
+  
 
   slideTiga.classList.remove('d-none');
   setTimeout(function () {
@@ -156,25 +158,20 @@ const _slideEnam = function () {
 
 
 new TypeIt("#teks1", {
-  strings: ["Today, I offer all my best prayers for you."],
+  strings: ["I will remind you as long as i live:", "You are enough,","You are not alone,","And you have always been","The Kindest,","The sweetest,","The most breathtakingly","Beautiful women in my eyes","Always, Forver."," ","So when you doubt yourself, when the mirror lies,","And your reflection feels too heavy to hold Remember:","My eyes have never seen anyone as mesmerizing as you."],
   startDelay: 4000,
-  speed: 75,
+  speed: 65,
   waitUntilVisible: true
 }).go();
 
 new TypeIt("#teks2", {
-  strings: ["With or without me, may the universe always make you happy in whatever way it takes.", " "],
+  strings: ["Just in case you forgot.", "You matter. You're awesome.","You're worth it. You're Loved","You're Magical"," ","Sitaaron ko Aankhon mai mehfooz rakhna badi der tak raat hi raat hogi","Musafir ho tum bhi","Musafir hai hum bhi","kisi mod par phir mulakaat hogi!"],
   startDelay: 1000,
   speed: 75,
   waitUntilVisible: true
 }).go();
 
-new TypeIt("#teks3", {
-  strings: ["Hello, Happy Birthday to you!", "I hope you like this little surprise I made for"],
-  startDelay: 1000,
-  speed: 75,
-  waitUntilVisible: true
-}).go();
+
 
 new TypeIt("#trims", {
   strings: ["Thank You."],

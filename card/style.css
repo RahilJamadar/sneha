@@ -167,7 +167,7 @@ body {
 #firstCard button#startBtn {
   margin-top: auto;
   margin-bottom: auto;
-  padding: 14px 24px;
+  padding: 60px 30px;
   font-size: 5vw;
   background: linear-gradient(135deg, #FF7882, #ffb4bc);
   color: #fff;
@@ -293,4 +293,10 @@ button#letterBtn:hover {
 #letterBtn a {
   text-decoration: none;
   color: white;
+}
+.card h1{
+  font-size: 6vw;
+  color: var(--color-heart);
+  margin-bottom: 4px;
+  text-align: center;
 }
